@@ -1,4 +1,10 @@
 import './style.css';
-import loadElements from './page-load';
+import loadHome from './page-load';
+/* import restaurant from './restaurant.jpg'; */
 
-loadElements();
+loadHome();
+
+// When "Menu" link is pressed, show the menu
+
+const menu = document.querySelector("li:nth-child(2) > a");
+console.log(menu)
