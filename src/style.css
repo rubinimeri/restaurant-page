@@ -54,12 +54,23 @@ body {
     overflow: auto;
     /* color: white; */
 }
+.title {
+    margin-bottom: 12px;
+    font-weight: 900;
+}
+.main > p {
+    padding: 30px 15px;
+    background-color: var(--primary-color);
+}
+
+/* Menu */
 .menu {
     display: grid;
     grid-auto-rows: 370px;
     justify-content: center;
     gap: 30px;
 }
+
 .menu > div {
     background-color: var(--primary-color);
     padding: 12px;
@@ -87,4 +98,16 @@ body {
 .menu p {
     margin: 12px 0;
     width: 300px;
+}
+
+/* Contact */
+
+.contact-info {
+    padding: 12px;
+    line-height: 30px;
+    background-color: var(--primary-color);
+}
+.contact-title {
+    margin-bottom: 12px;
+    font-weight: 900;
 }
