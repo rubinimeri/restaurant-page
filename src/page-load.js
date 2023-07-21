@@ -7,7 +7,7 @@ function _createElement(type, text, addClass) {
     return element;
 }
 
-export default function loadHome() {
+export default function loadElements() {
     
     const content = document.querySelector("#content");
     
@@ -46,7 +46,22 @@ export default function loadHome() {
     minus.`, "para")
     main.append(para);
 }
+export function loadHome() {
+    const main = document.querySelector(".main");
+    while(main.firstChild) {
+        main.removeChild(main.firstChild);
+    }
 
+    const title = _createElement("h1", "My Restaurant", "title")
+    main.append(title);
+
+    const para = _createElement("p", `This is some text that explains how good my restaurant is. Lorem
+    ipsum, dolor sit amet consectetur adipisicing elit. Impedit et iusto
+    sequi mollitia ut temporibus, consectetur possimus nobis consequuntur
+    dignissimos in magni, natus labore sed molestias eum perferendis odio
+    minus.`, "para")
+    main.append(para);
+}
 export function loadMenu() {
     // Remove elements from <main>
     const main = document.querySelector(".main");
@@ -81,4 +96,20 @@ export function loadMenu() {
     ipsum, dolor sit amet consectetur adipisicing elit. Impedit et iusto
     sequi mollitia ut temporibus, consectetur possimus nobis`, "menu-para"), _createElement("div", "", "menu-image"));
 
+}
+
+export function loadContact() {
+    const main = document.querySelector(".main");
+    while(main.firstChild) {
+        main.removeChild(main.firstChild);
+    }
+
+    const contactTitle = _createElement("h1", "Contact Us", "contact-title");
+    const contactInfo = _createElement("div", "", "contact-info");
+    main.append(contactTitle, contactInfo);
+
+    const manager = _createElement("h3", "Manager", "manager");
+    const number = _createElement("p", "+389-123-324-152", "manager-number");
+    const email = _createElement("p", "johndoe6@gmail.com", "manager-email");
+    contactInfo.append(manager, number, email);
 }
