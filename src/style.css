@@ -1,18 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Belanosima:wght@400;700&family=Lilita+One&family=Roboto:ital,wght@0,700;0,900;1,400&display=swap');
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Roboto';
+}
+:root {
+    --primary-color: #faedcd;
+    --secondary-color: #d4a373;
 }
 html {
     height: 100%;
 }
 body {
     height: 100%;
-    background: url(./restaurant.jpg);
+    background: url(./images/restaurant.jpg);
     background-position: 20% 100%;
 }
+
+#content{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Header */
+
 .header {
-    background-color: #C08437;
+    background-color: var(--primary-color);
     height: 70px;
     display: flex;
     align-items: center;
@@ -24,17 +41,50 @@ body {
     gap: 30px;
 }
 
-#content{
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
+/* Main */
+
 .main {
     height: 80%;
     width: 70%;
-    border: 4px solid white;
-    padding: 30px;
-    background-color: #C08437;
+    max-width: 700px;
+   /*  border: 4px solid white; */
+    padding: 50px;
+    background-color: var(--secondary-color);
     align-self: center;
+    overflow: auto;
+    /* color: white; */
+}
+.menu {
+    display: grid;
+    grid-auto-rows: 370px;
+    justify-content: center;
+    gap: 30px;
+}
+.menu > div {
+    background-color: var(--primary-color);
+    padding: 12px;
+}
+.menu-image{
+    width: 300px;
+    height: 200px;
+}
+.burger .menu-image {
+    background: url(./images/burger.jpg);
+    background-size: cover;
+    background-position: 20% 40%;
+}
+.pizza .menu-image {
+    background: url(./images/pizza.jpg);
+    background-size: cover;
+}
+.steak .menu-image {
+    background: url(./images/steak.jpg);
+    background-size: cover;
+}
+.menu h3 {
+    font-size: 26px;
+}
+.menu p {
+    margin: 12px 0;
+    width: 300px;
 }
