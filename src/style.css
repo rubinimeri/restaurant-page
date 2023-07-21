@@ -40,6 +40,16 @@ body {
     display: flex;
     gap: 30px;
 }
+.nav a {
+    padding: 8px 18px;
+    border-radius: 4px;
+}
+.nav a:hover {
+    background-color: #d4a373;
+}
+.nav a:active {
+    background-color: white;
+}
 
 /* Main */
 
